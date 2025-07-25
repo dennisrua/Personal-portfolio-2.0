@@ -1,0 +1,218 @@
+/* Custom CSS for animations, font-family, and base colors */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding-top: 64px; /* Adjust for fixed navbar height */
+  background-color: #1a1a1a; /* Dark background inspired by olaolu.dev */
+  color: #e0e0e0; /* Light text color */
+}
+
+/* Accent color variable for easier changes */
+:root {
+  --accent-color: #ff8c00; /* Orange accent color */
+}
+
+/* Utility classes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-fade-in-up.delay-400 {
+  animation-delay: 0.4s;
+}
+
+/* Typing effect for hero text */
+.typing-text {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid var(--accent-color); /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.05em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end) forwards,
+    blink-caret 0.75s step-end infinite;
+  width: 0; /* Start with 0 width for typing effect */
+}
+
+/* The typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--accent-color);
+  }
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Active navigation link styling */
+.nav-link.active {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* Custom button styles for accent color */
+.btn-primary {
+  background-color: var(--accent-color);
+  color: #1a1a1a; /* Dark text for accent background */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #e67e00; /* Slightly darker orange on hover */
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+.btn-secondary:hover {
+  background-color: var(--accent-color);
+  color: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+/* Projects */
+#projects {
+  padding: 50px 0;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), var(--accent-color));
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.layer a {
+  margin-top: 20px;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  height: 100%;
+}
+
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid var(--accent-color);
+  padding: 14px 50px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s ease, color 0.5s ease;
+}
+
+.btn:hover {
+  background: var(--accent-color);
+}
+
+button.btn {
+  background-color: transparent;
+}
+
+/* Skill tag styling */
+.skill-tag {
+  background-color: #333333; /* Darker background for tags */
+  color: #e0e0e0;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px; /* Full rounded */
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border: 1px solid #4a4a4a; /* Subtle border */
+}
+.skill-tag:hover {
+  background-color: var(--accent-color);
+  color: #1a1a1a;
+}

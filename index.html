@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dennis Rua Mazerah - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter from Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Lucide Icons (for professional icons) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/4e31bed758.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="font-inter">
+    <!-- Navigation Bar -->
+    <nav
+      class="fixed top-0 left-0 right-0 bg-[#1a1a1a] bg-opacity-95 backdrop-blur-sm z-50 py-4 px-4 sm:px-6 lg:px-8 border-b border-gray-800"
+    >
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="text-2xl font-bold text-white">Dennis Rua</div>
+        <div class="flex items-center space-x-4">
+          <a
+            href="#home"
+            class="nav-link text-gray-400 hover:text-white transition-colors duration-300 text-lg font-medium"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="nav-link text-gray-400 hover:text-white transition-colors duration-300 text-lg font-medium"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="nav-link text-gray-400 hover:text-white transition-colors duration-300 text-lg font-medium"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="nav-link text-gray-400 hover:text-white transition-colors duration-300 text-lg font-medium"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-gray-400 hover:text-white transition-colors duration-300 text-lg font-medium"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="btn-primary px-5 py-2 rounded-full text-lg font-semibold shadow-md hidden sm:block"
+            >Download CV</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative h-screen flex flex-col items-center justify-center text-center bg-[#1a1a1a] text-white pt-20 pb-10"
+    >
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 z-10">
+        <!-- Profile Picture -->
+        <img
+          src="images/profile.png"
+          alt="Dennis Rua Mazerah"
+          class="w-44 h-44 rounded-full mx-auto mb-8 border-4 border-gray-700 shadow-lg object-cover"
+        />
+        <h1
+          class="text-5xl md:text-7xl font-extrabold leading-tight mb-4 animate-fade-in-up"
+        >
+          Hi, I'm <span class="text-orange-500">Dennis Rua Mazerah</span>
+        </h1>
+        <p
+          class="text-2xl md:text-3xl mb-8 max-w-3xl mx-auto opacity-90 animate-fade-in-up delay-200 typing-text"
+          id="typing-text"
+        >
+          A Front-End Developer
+        </p>
+        <div class="flex justify-center space-x-6 animate-fade-in-up delay-400">
+          <a
+            href="#projects"
+            class="btn-primary px-8 py-3 rounded-full text-lg font-semibold shadow-lg"
+          >
+            View My Work
+          </a>
+          <a
+            href="#contact"
+            class="btn-secondary px-8 py-3 rounded-full text-lg font-semibold shadow-lg"
+          >
+            Get In Touch
+          </a>
+        </div>
+        <div
+          class="flex justify-center space-x-6 mt-12 animate-fade-in-up delay-600"
+        >
+          <a
+            href="https://github.com/DennisRua"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-400 hover:text-white transition-colors duration-300"
+          >
+            <i data-lucide="github" class="w-8 h-8"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/dennis-rua-03249b15a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-400 hover:text-blue-500 transition-colors duration-300"
+          >
+            <i data-lucide="linkedin" class="w-8 h-8"></i>
+          </a>
+          <a
+            href="mailto:ruadennis20@gmail.com"
+            class="text-gray-400 hover:text-orange-500 transition-colors duration-300"
+          >
+            <i data-lucide="mail" class="w-8 h-8"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="py-24 bg-[#1a1a1a] px-4 sm:px-6 lg:px-8 border-t border-gray-800"
+    >
+      <div class="container mx-auto max-w-6xl">
+        <h2
+          class="text-4xl md:text-5xl font-extrabold text-white mb-12 flex items-center justify-center space-x-3"
+        >
+          <i data-lucide="briefcase" class="w-10 h-10 text-orange-500"></i>
+          <span>About Me</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+          <div class="text-lg text-gray-300 space-y-6 leading-relaxed">
+            <p>
+              I'm a passionate and detail-oriented front-end developer with a
+              background in Business and Information Technology. I thrive at the
+              intersection of design and functionality, creating clean,
+              user-friendly web applications that solve real-world problems.
+              With strong skills in HTML, CSS, JavaScript, and responsive
+              design, I aim to build digital solutions that are both accessible
+              and engaging. I also have a solid foundation in database
+              management and am currently expanding my knowledge in React and
+              back-end technologies.
+            </p>
+            <p>
+              Recently, I completed a 12-week Professional Foundations program
+              at ALX, where I worked on real-world projects, including
+              developing a USSD-based financial literacy tool for underserved
+              communities. That experience sharpened my problem-solving,
+              teamwork, and UX design skills. I'm excited to join a
+              forward-thinking team where I can contribute meaningfully,
+              continue growing as a developer, and help turn ideas into
+              impactful online experiences.
+            </p>
+          </div>
+          <div class="space-y-10">
+            <!-- Education (moved from previous skills block) -->
+            <div
+              class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg border border-gray-700"
+            >
+              <h3
+                class="text-2xl font-bold text-white mb-4 flex items-center space-x-2"
+              >
+                <i
+                  data-lucide="graduation-cap"
+                  class="w-6 h-6 text-orange-500"
+                ></i>
+                <span>Education</span>
+              </h3>
+              <ul class="space-y-4 text-gray-300">
+                <li>
+                  <p class="font-semibold text-white">
+                    Bachelor of Business and Information Technology
+                  </p>
+                  <p>Mount Kenya University (Expected completion: 2025)</p>
+                  <p class="text-sm italic text-gray-400">
+                    Final-year project: SACCO Management System (Ufanisi SACCO)
+                  </p>
+                </li>
+                <li>
+                  <p class="font-semibold text-white">Diploma in ICT</p>
+                  <p>Technical University of Mombasa (2017–2019)</p>
+                </li>
+              </ul>
+            </div>
+            <!-- Soft Skills (moved from previous skills block) -->
+            <div
+              class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg border border-gray-700"
+            >
+              <h3
+                class="text-2xl font-bold text-white mb-4 flex items-center space-x-2"
+              >
+                <i data-lucide="users" class="w-6 h-6 text-orange-500"></i>
+                <span>Soft Skills</span>
+              </h3>
+              <ul class="list-disc list-inside text-gray-400 space-y-1">
+                <li>Team collaboration</li>
+                <li>Adaptability</li>
+                <li>Client communication</li>
+                <li>Research</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Skills Section -->
+    <section
+      id="skills"
+      class="py-24 bg-[#1a1a1a] px-4 sm:px-6 lg:px-8 border-t border-gray-800"
+    >
+      <div class="container mx-auto max-w-6xl">
+        <h2
+          class="text-4xl md:text-5xl font-extrabold text-white mb-12 flex items-center justify-center space-x-3"
+        >
+          <i data-lucide="award" class="w-10 h-10 text-orange-500"></i>
+          <span>My Skills & Technologies</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <!-- Web Development Skills -->
+          <div
+            class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg border border-gray-700"
+          >
+            <h3
+              class="text-2xl font-bold text-white mb-6 flex items-center space-x-2"
+            >
+              <i data-lucide="globe" class="w-6 h-6 text-orange-500"></i>
+              <span>Web Development</span>
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express.js</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">Responsive Design</span>
+            </div>
+          </div>
+
+          <!-- Tools & Platforms Skills -->
+          <div
+            class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg border border-gray-700"
+          >
+            <h3
+              class="text-2xl font-bold text-white mb-6 flex items-center space-x-2"
+            >
+              <i data-lucide="tool" class="w-6 h-6 text-orange-500"></i>
+              <span>Tools & Platforms</span>
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="skill-tag">Git & GitHub</span>
+              <span class="skill-tag">Netlify</span>
+              <span class="skill-tag">Visual Studio Code</span>
+              <span class="skill-tag">Figma (basic)</span>
+              <span class="skill-tag">Postman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="/images/work-1.png" />
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>
+                The app connects you to talented people around the world.
+                Download it from play store.
+              </p>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="work">
+            <img src="/images/work-2.png" />
+            <div class="layer">
+              <h3>Music App</h3>
+              <p>
+                The app connects you to talented people around the world.
+                Download it from play store.
+              </p>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="work">
+            <img src="/images/work-3.png" />
+            <div class="layer">
+              <h3>Online Shopping App</h3>
+              <p>
+                The app connects you to talented people around the world.
+                Download it from play store.
+              </p>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-24 bg-[#1a1a1a] px-4 sm:px-6 lg:px-8 border-t border-gray-800"
+    >
+      <div class="container mx-auto max-w-4xl">
+        <h2
+          class="text-4xl md:text-5xl font-extrabold text-white mb-12 flex items-center justify-center space-x-3"
+        >
+          <i data-lucide="mail" class="w-10 h-10 text-orange-500"></i>
+          <span>Get In Touch</span>
+        </h2>
+        <p class="text-center text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
+          I'm always open to new opportunities, collaborations, and
+          conversations. Feel free to reach out!
+        </p>
+        <div
+          class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg border border-gray-700 grid grid-cols-1 md:grid-cols-2 gap-8"
+        >
+          <div class="flex flex-col items-center text-center">
+            <i data-lucide="mail" class="w-10 h-10 text-orange-500 mb-4"></i>
+            <h3 class="text-xl font-semibold text-white mb-2">Email Me</h3>
+            <a
+              href="mailto:ruadennis20@gmail.com"
+              class="text-orange-400 hover:underline text-lg"
+            >
+              ruadennis20@gmail.com
+            </a>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <i data-lucide="phone" class="w-10 h-10 text-orange-500 mb-4"></i>
+            <h3 class="text-xl font-semibold text-white mb-2">Call Me</h3>
+            <a
+              href="tel:+254705379358"
+              class="text-orange-400 hover:underline text-lg"
+            >
+              +254 705 379358
+            </a>
+          </div>
+          <div class="md:col-span-2 flex justify-center space-x-6 mt-6">
+            <a
+              href="https://github.com/DennisRua"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-white transition-colors duration-300"
+            >
+              <i data-lucide="github" class="w-10 h-10"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dennis-rua-03249b15a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-blue-500 transition-colors duration-300"
+            >
+              <i data-lucide="linkedin" class="w-10 h-10"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-[#111111] text-gray-400 py-8 text-center text-sm border-t border-gray-800"
+    >
+      <div class="container mx-auto px-4">
+        <p>
+          &copy; <span id="current-year"></span> Dennis Rua Mazerah. All rights
+          reserved.
+        </p>
+        <p class="mt-2">Built with HTML, CSS & JavaScript.</p>
+      </div>
+    </footer>
+
+    <!-- Custom JavaScript Link -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
