@@ -1,18 +1,15 @@
-/* Custom CSS for animations, font-family, and base colors */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  padding-top: 64px; /* Adjust for fixed navbar height */
-  background-color: #1a1a1a; /* Dark background inspired by olaolu.dev */
-  color: #e0e0e0; /* Light text color */
+  padding-top: 64px;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
 }
 
-/* Accent color variable for easier changes */
 :root {
-  --accent-color: #ff8c00; /* Orange accent color */
+  --accent-color: #ff8c00;
 }
 
-/* Utility classes for animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -45,16 +42,15 @@ body {
   animation-delay: 0.4s;
 }
 
-/* Typing effect for hero text */
 .typing-text {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid var(--accent-color); /* The typewriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.05em; /* Adjust as needed */
+  overflow: hidden;
+  border-right: 0.15em solid var(--accent-color);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.05em;
   animation: typing 3.5s steps(40, end) forwards,
     blink-caret 0.75s step-end infinite;
-  width: 0; /* Start with 0 width for typing effect */
+  width: 0;
 }
 
 /* The typing animation */
@@ -78,25 +74,22 @@ body {
   }
 }
 
-/* Smooth scrolling behavior */
 html {
   scroll-behavior: smooth;
 }
 
-/* Active navigation link styling */
 .nav-link.active {
   color: var(--accent-color);
   font-weight: 600;
 }
 
-/* Custom button styles for accent color */
 .btn-primary {
   background-color: var(--accent-color);
-  color: #1a1a1a; /* Dark text for accent background */
+  color: #1a1a1a;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .btn-primary:hover {
-  background-color: #e67e00; /* Slightly darker orange on hover */
+  background-color: #e67e00;
   transform: translateY(-2px);
 }
 
@@ -201,16 +194,33 @@ button.btn {
   background-color: transparent;
 }
 
-/* Skill tag styling */
+/* Responsive Video Container */
+.video-responsive-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+}
+
+.video-responsive-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .skill-tag {
-  background-color: #333333; /* Darker background for tags */
+  background-color: #333333;
   color: #e0e0e0;
   padding: 0.5rem 1rem;
-  border-radius: 9999px; /* Full rounded */
+  border-radius: 9999px;
   font-size: 0.9rem;
   font-weight: 500;
   transition: background-color 0.2s ease, color 0.2s ease;
-  border: 1px solid #4a4a4a; /* Subtle border */
+  border: 1px solid #4a4a4a;
 }
 .skill-tag:hover {
   background-color: var(--accent-color);

@@ -1,15 +1,13 @@
-// Initialize Lucide Icons
 lucide.createIcons();
 
-// Get current year for footer
 document.getElementById('current-year').textContent = new Date().getFullYear();
 
-// Typing effect for hero text
 const typingTextElement = document.getElementById('typing-text');
 const phrases = [
   'A Front-End Developer',
   'A Problem Solver',
   'A Web Enthusiast',
+  'A Collaborative Team Player',
 ];
 let phraseIndex = 0;
 let charIndex = 0;
@@ -66,7 +64,7 @@ const navLinks = document.querySelectorAll('.nav-link');
 window.addEventListener('scroll', () => {
   let current = '';
   // Get the scroll position, adjusting for the fixed header
-  const scrollY = window.pageYOffset + 100; // Add header height as offset
+  const scrollY = window.pageYOffset + 100;
 
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;

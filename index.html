@@ -49,6 +49,11 @@
             >Projects</a
           >
           <a
+            href="#video-showcase"
+            class="nav-link text-gray-400 hover:text-white transition-colors duration-300 text-lg font-medium"
+            >Video</a
+          >
+          <a
             href="#contact"
             class="nav-link text-gray-400 hover:text-white transition-colors duration-300 text-lg font-medium"
             >Contact</a
@@ -165,7 +170,7 @@
             </p>
           </div>
           <div class="space-y-10">
-            <!-- Education (moved from previous skills block) -->
+            <!-- Education -->
             <div
               class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg border border-gray-700"
             >
@@ -183,14 +188,14 @@
                   <p class="font-semibold text-white">
                     Bachelor of Business and Information Technology
                   </p>
-                  <p>Mount Kenya University (Expected completion: 2025)</p>
+                  <p>Mount Kenya University</p>
                   <p class="text-sm italic text-gray-400">
                     Final-year project: SACCO Management System (Ufanisi SACCO)
                   </p>
                 </li>
                 <li>
                   <p class="font-semibold text-white">Diploma in ICT</p>
-                  <p>Technical University of Mombasa (2017–2019)</p>
+                  <p>Technical University of Mombasa</p>
                 </li>
               </ul>
             </div>
@@ -273,55 +278,100 @@
     </section>
 
     <!-- Projects Section -->
-    <div id="projects">
-      <div class="container">
-        <h1 class="sub-title">My Projects</h1>
+    <section
+      id="projects"
+      class="py-24 bg-[#1a1a1a] px-4 sm:px-6 lg:px-8 border-t border-gray-800"
+    >
+      <div class="container mx-auto max-w-6xl">
+        <!-- Added max-w-6xl to match other sections' width -->
+        <h2
+          class="text-4xl md:text-5xl font-extrabold text-white mb-12 flex items-center justify-center space-x-3"
+        >
+          <i data-lucide="code" class="w-10 h-10 text-orange-500"></i>
+          <span>My Projects</span>
+        </h2>
         <div class="work-list">
           <div class="work">
-            <img src="/images/work-1.png" />
+            <img src="images/work-1.png" alt="Sacco Management Website" />
             <div class="layer">
-              <h3>Social Media App</h3>
+              <h3>Sacco Management Website</h3>
               <p>
-                The app connects you to talented people around the world.
-                Download it from play store.
+                A website for managing SACCO operations, including member
+                registration, loan applications, and financial reporting.
               </p>
-              <a href="#"
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="work">
+            <img src="images/work-2.png" alt="My Portfolio Website" />
+            <div class="layer">
+              <h3>My Portfolio Website</h3>
+              <p>
+                A personal portfolio website showcasing my skills, projects, and
+                contact information. Built with HTML, CSS, and JavaScript.
+              </p>
+              <a
+                href="https://dennisrua.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><i class="fa-solid fa-arrow-up-right-from-square"></i
               ></a>
             </div>
           </div>
 
           <div class="work">
-            <img src="/images/work-2.png" />
-            <div class="layer">
-              <h3>Music App</h3>
-              <p>
-                The app connects you to talented people around the world.
-                Download it from play store.
-              </p>
-              <a href="#"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-
-          <div class="work">
-            <img src="/images/work-3.png" />
+            <img src="images/work-3.png" alt="Online Shopping App" />
             <div class="layer">
               <h3>Online Shopping App</h3>
               <p>
                 The app connects you to talented people around the world.
                 Download it from play store.
               </p>
-              <a href="#"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
             </div>
           </div>
         </div>
         <a href="#" class="btn">See more</a>
       </div>
-    </div>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section
+      id="video-showcase"
+      class="py-24 bg-[#1a1a1a] px-4 sm:px-6 lg:px-8 border-t border-gray-800"
+    >
+      <div class="container mx-auto max-w-4xl">
+        <h2
+          class="text-4xl md:text-5xl font-extrabold text-white mb-12 flex items-center justify-center space-x-3"
+        >
+          <i data-lucide="youtube" class="w-10 h-10 text-orange-500"></i>
+          <span>Get To Hear From Me</span>
+        </h2>
+        <p class="text-center text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
+          Here's an elevator pitch video where I briefly share my developer
+          journey.
+        </p>
+        <div
+          class="video-responsive-container bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-700"
+        >
+          <iframe
+            width="1817"
+            height="1022"
+            src="https://www.youtube.com/embed/pR5VOamuDHM"
+            title="My Developer Journey | Dennis – Front-End Developer | ALX Professional Foundations Pitch"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
 
     <!-- Contact Section -->
     <section
