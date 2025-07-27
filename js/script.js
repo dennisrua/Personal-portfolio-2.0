@@ -40,6 +40,27 @@ function typeWriter() {
   setTimeout(typeWriter, typeSpeed);
 }
 
+// Mobile menu elements and functions
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const closeMenuButton = document.getElementById('close-menu-button');
+const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+const body = document.body; // Reference to the body element
+
+function openMobileMenu() {
+  mobileMenuOverlay.classList.add('open');
+  body.classList.add('no-scroll'); // Prevent body scrolling
+  lucide.createIcons(); // Re-create icons for the newly visible menu
+}
+
+function closeMobileMenu() {
+  mobileMenuOverlay.classList.remove('open');
+  body.classList.remove('no-scroll'); // Allow body scrolling
+}
+
+// Event listeners for mobile menu buttons
+mobileMenuButton.addEventListener('click', openMobileMenu);
+closeMenuButton.addEventListener('click', closeMobileMenu);
+
 // Smooth scrolling and active navigation link highlighting
 document.querySelectorAll('nav a').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
