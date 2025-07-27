@@ -231,7 +231,7 @@ button.btn {
 #mobile-menu-overlay {
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
-  height: 50vh;
+  height: 65vh;
   width: 100vw;
   inset: 0;
   z-index: 60;
