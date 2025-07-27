@@ -456,45 +456,96 @@
           conversations. Feel free to reach out!
         </p>
         <div
-          class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg border border-gray-700 grid grid-cols-1 md:grid-cols-2 gap-8"
+          class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg border border-gray-700 grid grid-cols-1 md:grid-cols-3 gap-8"
         >
-          <div class="flex flex-col items-center text-center">
-            <i data-lucide="mail" class="w-10 h-10 text-orange-500 mb-4"></i>
-            <h3 class="text-xl font-semibold text-white mb-2">Email Me</h3>
-            <a
-              href="mailto:ruadennis20@gmail.com"
-              class="text-orange-400 hover:underline text-lg"
-            >
-              ruadennis20@gmail.com
-            </a>
+          <div
+            class="md:col-span-1 flex-col items-center text-center bg-[#2a2a2a] p-8 border-none"
+          >
+            <div class="flex flex-col items-center text-center mb-14">
+              <i data-lucide="mail" class="w-10 h-10 text-orange-500 mb-4"></i>
+              <h3 class="text-xl font-semibold text-white mb-2">Email Me</h3>
+              <a
+                href="mailto:ruadennis20@gmail.com"
+                class="text-orange-400 hover:underline text-lg"
+              >
+                ruadennis20@gmail.com
+              </a>
+            </div>
+            <div class="flex flex-col items-center text-center mb-14">
+              <i data-lucide="phone" class="w-10 h-10 text-orange-500 mb-4"></i>
+              <h3 class="text-xl font-semibold text-white mb-2">Call Me</h3>
+              <a
+                href="tel:+254705379358"
+                class="text-orange-400 hover:underline text-lg"
+              >
+                +254 705 379358
+              </a>
+            </div>
+            <div class="md:col-span-2 flex justify-center space-x-6 mt-6">
+              <a
+                href="https://github.com/DennisRua"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+              >
+                <i data-lucide="github" class="w-10 h-10"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/dennis-rua-03249b15a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-400 hover:text-blue-500 transition-colors duration-300"
+              >
+                <i data-lucide="linkedin" class="w-10 h-10"></i>
+              </a>
+            </div>
           </div>
-          <div class="flex flex-col items-center text-center">
-            <i data-lucide="phone" class="w-10 h-10 text-orange-500 mb-4"></i>
-            <h3 class="text-xl font-semibold text-white mb-2">Call Me</h3>
-            <a
-              href="tel:+254705379358"
-              class="text-orange-400 hover:underline text-lg"
-            >
-              +254 705 379358
-            </a>
-          </div>
-          <div class="md:col-span-2 flex justify-center space-x-6 mt-6">
-            <a
-              href="https://github.com/DennisRua"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-gray-400 hover:text-white transition-colors duration-300"
-            >
-              <i data-lucide="github" class="w-10 h-10"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/dennis-rua-03249b15a/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-gray-400 hover:text-blue-500 transition-colors duration-300"
-            >
-              <i data-lucide="linkedin" class="w-10 h-10"></i>
-            </a>
+
+          <!-- Contact Form -->
+
+          <div
+            class="md:col-span-2 bg-[#2a2a2a] p-8 rounded-xl shadow-lg border border-gray-700 flex flex-col items-center"
+          >
+            <h3 class="text-3xl font-bold text-white mb-6">Send a Message</h3>
+
+            <form id="contact-form" class="space-y-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                class="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-orange-500"
+                required
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                class="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-orange-500"
+                required
+              />
+
+              <textarea
+                name="message"
+                rows="6"
+                placeholder="Hi! I've been thinking a design system could really help us at Company X. Got time to chat about it sometime soon?"
+                class="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-orange-500 resize-y"
+                required
+              ></textarea>
+
+              <button
+                type="submit"
+                class="btn-contact-submit md:w-auto px-6 py-3 rounded-md text-lg font-semibold shadow-md"
+              >
+                Shoot Me a Message
+                <i data-lucide="send" class="inline-block w-5 h-5 ml-2"></i>
+              </button>
+            </form>
+
+            <span
+              id="form-message"
+              class="mt-4 block text-center text-green-500"
+            ></span>
           </div>
         </div>
       </div>
