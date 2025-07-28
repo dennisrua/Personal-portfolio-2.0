@@ -48,13 +48,13 @@ const body = document.body; // Reference to the body element
 
 function openMobileMenu() {
   mobileMenuOverlay.classList.add('open');
-  body.classList.add('no-scroll'); // Prevent body scrolling
-  lucide.createIcons(); // Re-create icons for the newly visible menu
+  body.classList.add('no-scroll');
+  lucide.createIcons();
 }
 
 function closeMobileMenu() {
   mobileMenuOverlay.classList.remove('open');
-  body.classList.remove('no-scroll'); // Allow body scrolling
+  body.classList.remove('no-scroll');
 }
 
 // Event listeners for mobile menu buttons
@@ -64,7 +64,6 @@ closeMenuButton.addEventListener('click', closeMobileMenu);
 // Smooth scrolling and active navigation link highlighting
 document.querySelectorAll('nav a').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
-    // Allow the "Resume" link to behave normally if it's not a hash link
     if (this.getAttribute('href') === '#') {
       e.preventDefault();
     } else if (this.getAttribute('href').startsWith('#')) {
@@ -84,7 +83,7 @@ const navLinks = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
   let current = '';
-  // Get the scroll position, adjusting for the fixed header
+
   const scrollY = window.pageYOffset + 100;
 
   sections.forEach((section) => {
