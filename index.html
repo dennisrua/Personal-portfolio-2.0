@@ -501,14 +501,16 @@
             </div>
           </div>
 
-          <!-- Contact Form -->
-
-          <div
-            class="md:col-span-2 bg-[#2a2a2a] p-8 rounded-xl shadow-lg border border-gray-700 flex flex-col items-center"
-          >
+          <!-- Contact Form Column -->
+          <div class="md:col-span-2 space-y-4">
             <h3 class="text-3xl font-bold text-white mb-6">Send a Message</h3>
-
-            <form id="contact-form" class="space-y-4">
+            <form
+              id="contact-form"
+              action="mailto:ruadennis20@gmail.com"
+              method="post"
+              enctype="text/plain"
+              class="space-y-4"
+            >
               <input
                 type="text"
                 name="name"
@@ -516,7 +518,6 @@
                 class="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-orange-500"
                 required
               />
-
               <input
                 type="email"
                 name="email"
@@ -524,7 +525,6 @@
                 class="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-orange-500"
                 required
               />
-
               <textarea
                 name="message"
                 rows="6"
@@ -532,12 +532,11 @@
                 class="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-orange-500 resize-y"
                 required
               ></textarea>
-
               <button
                 type="submit"
-                class="btn-contact-submit md:w-auto px-6 py-3 rounded-md text-lg font-semibold shadow-md"
+                class="btn-contact-submit w-full md:w-auto px-6 py-3 rounded-md text-lg font-semibold shadow-md"
               >
-                Shoot Me a Message
+                Shoot Me A Message
                 <i data-lucide="send" class="inline-block w-5 h-5 ml-2"></i>
               </button>
             </form>
