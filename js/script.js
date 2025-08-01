@@ -104,6 +104,39 @@ window.addEventListener('scroll', () => {
   });
 });
 
+// Netlify Forms with JavaScript Submission
+const contactForm = document.getElementById('contact-form');
+const formMessage = document.getElementById('form-message');
+
+contactForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(contactForm);
+  const encodedData = new URLSearchParams(formData).toString();
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encodedData,
+    });
+
+    if (response.ok) {
+      formMessage.textContent =
+        'Thank you for your message! I will get back to you soon.';
+      formMessage.style.color = '#10B981';
+      contactForm.reset();
+    } else {
+      throw new Error('Form submission failed.');
+    }
+  } catch (error) {
+    formMessage.textContent =
+      'Oops! Something went wrong. Please try again later.';
+    formMessage.style.color = '#EF4444'; // Tailwind's red-500 for error
+    console.error('Error submitting form:', error);
+  }
+});
+
 // Set initial active link on page load and start typing effect
 window.addEventListener('load', () => {
   const firstSection = document.getElementById('home');
