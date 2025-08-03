@@ -104,6 +104,70 @@ window.addEventListener('scroll', () => {
   });
 });
 
+// Carousel functionality for testimonials
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.carousel-track');
+  const testimonials = document.querySelectorAll('.testimonial-card');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  const dots = document.querySelectorAll('.dot');
+  let index = 0;
+  let autoScrollInterval;
+
+  function updateCarousel() {
+    const offset = -index * 100;
+    track.style.transform = `translateX(${offset}%)`;
+
+    dots.forEach((dot) => dot.classList.remove('bg-orange-500'));
+    dots.forEach((dot) => dot.classList.add('bg-gray-500'));
+    dots[index].classList.remove('bg-gray-500');
+    dots[index].classList.add('bg-orange-500');
+  }
+
+  function nextSlide() {
+    index = (index + 1) % testimonials.length;
+    updateCarousel();
+  }
+
+  function startAutoScroll() {
+    autoScrollInterval = setInterval(nextSlide, 6000);
+  }
+
+  function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
+  }
+
+  nextBtn.addEventListener('click', () => {
+    stopAutoScroll();
+    nextSlide();
+    startAutoScroll();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    stopAutoScroll();
+    index = (index - 1 + testimonials.length) % testimonials.length;
+    updateCarousel();
+    startAutoScroll();
+  });
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      stopAutoScroll();
+      index = parseInt(dot.getAttribute('data-index'));
+      updateCarousel();
+      startAutoScroll();
+    });
+  });
+
+  // Pause auto-scroll on hover
+  testimonials.addEventListener('mouseenter', stopAutoScroll);
+  testimonials.addEventListener('mouseleave', startAutoScroll);
+
+  // Initialize
+  updateCarousel();
+  startAutoScroll();
+});
+
 // Set initial active link on page load and start typing effect
 window.addEventListener('load', () => {
   const firstSection = document.getElementById('home');
