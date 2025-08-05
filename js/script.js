@@ -42,24 +42,37 @@ function typeWriter() {
 
 // Mobile menu elements and functions
 const mobileMenuButton = document.getElementById('mobile-menu-button');
-const closeMenuButton = document.getElementById('close-menu-button');
 const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
 const body = document.body; // Reference to the body element
 
 function openMobileMenu() {
   mobileMenuOverlay.classList.add('open');
   body.classList.add('no-scroll');
-  lucide.createIcons();
+  mobileMenuButton.classList.add('open'); // Add 'open' class to hamburger button
 }
 
 function closeMobileMenu() {
   mobileMenuOverlay.classList.remove('open');
   body.classList.remove('no-scroll');
+  mobileMenuButton.classList.remove('open'); // Remove 'open' class from hamburger button
 }
 
-// Event listeners for mobile menu buttons
-mobileMenuButton.addEventListener('click', openMobileMenu);
-closeMenuButton.addEventListener('click', closeMobileMenu);
+// Event listener for mobile menu button to toggle
+// Added null check here
+if (mobileMenuButton) {
+  mobileMenuButton.addEventListener('click', () => {
+    if (mobileMenuOverlay.classList.contains('open')) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  });
+}
+
+// Also update the links inside the mobile menu to close the menu when clicked
+document.querySelectorAll('#mobile-menu-overlay a').forEach((link) => {
+  link.addEventListener('click', closeMobileMenu);
+});
 
 // Smooth scrolling and active navigation link highlighting
 document.querySelectorAll('nav a').forEach((anchor) => {
@@ -120,8 +133,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     dots.forEach((dot) => dot.classList.remove('bg-orange-500'));
     dots.forEach((dot) => dot.classList.add('bg-gray-500'));
-    dots[index].classList.remove('bg-gray-500');
-    dots[index].classList.add('bg-orange-500');
+    // Added null check for dots[index]
+    if (dots[index]) {
+      dots[index].classList.remove('bg-gray-500');
+      dots[index].classList.add('bg-orange-500');
+    }
   }
 
   function nextSlide() {
@@ -137,18 +153,24 @@ document.addEventListener('DOMContentLoaded', () => {
     clearInterval(autoScrollInterval);
   }
 
-  nextBtn.addEventListener('click', () => {
-    stopAutoScroll();
-    nextSlide();
-    startAutoScroll();
-  });
+  // Added null checks here
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      stopAutoScroll();
+      nextSlide();
+      startAutoScroll();
+    });
+  }
 
-  prevBtn.addEventListener('click', () => {
-    stopAutoScroll();
-    index = (index - 1 + testimonials.length) % testimonials.length;
-    updateCarousel();
-    startAutoScroll();
-  });
+  // Added null checks here
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      stopAutoScroll();
+      index = (index - 1 + testimonials.length) % testimonials.length;
+      updateCarousel();
+      startAutoScroll();
+    });
+  }
 
   dots.forEach((dot) => {
     dot.addEventListener('click', () => {
@@ -159,13 +181,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Pause auto-scroll on hover
-  testimonials.addEventListener('mouseenter', stopAutoScroll);
-  testimonials.addEventListener('mouseleave', startAutoScroll);
+  // Corrected: iterate over NodeList to add event listeners to each card
+  testimonials.forEach((card) => {
+    card.addEventListener('mouseenter', stopAutoScroll);
+    card.addEventListener('mouseleave', startAutoScroll);
+  });
 
-  // Initialize
-  updateCarousel();
-  startAutoScroll();
+  // Initialize carousel only if there are testimonial cards
+  if (testimonials.length > 0) {
+    updateCarousel();
+    startAutoScroll();
+  }
 });
 
 // Set initial active link on page load and start typing effect
@@ -177,5 +203,8 @@ window.addEventListener('load', () => {
       navLinkHome.classList.add('active');
     }
   }
-  typeWriter(); // Start the typing animation
+  // Ensure typingTextElement exists before calling typeWriter
+  if (typingTextElement) {
+    typeWriter(); // Start the typing animation
+  }
 });

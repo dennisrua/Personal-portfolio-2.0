@@ -44,13 +44,9 @@
     <!-- Mobile Navigation Overlay -->
     <div
       id="mobile-menu-overlay"
-      class="fixed inset-0 z-60 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden"
+      class="fixed inset-0 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden"
     >
-      <div class="flex justify-end p-4">
-        <button id="close-menu-button" class="text-white focus:outline-none">
-          <i data-lucide="x" class="w-8 h-8"></i>
-        </button>
-      </div>
+      <!-- Removed duplicate mobile-menu-button from here -->
       <div class="flex flex-col items-center space-y-6 text-xl py-10">
         <a
           href="#home"
@@ -83,6 +79,12 @@
           >Video</a
         >
         <a
+          href="#testimonials"
+          class="nav-link text-gray-400 hover:text-white transition-colors duration-300"
+          onclick="closeMobileMenu()"
+          >Testimonials</a
+        >
+        <a
           href="#contact"
           class="nav-link text-gray-400 hover:text-white transition-colors duration-300"
           onclick="closeMobileMenu()"
@@ -100,7 +102,8 @@
 
     <!-- Navigation Bar -->
     <nav
-      class="fixed top-0 left-0 right-0 bg-[#1a1a1a] bg-opacity-95 backdrop-blur-sm z-50 py-4 px-4 sm:px-6 lg:px-8 border-b border-gray-800"
+      class="fixed top-0 left-0 right-0 bg-[#1a1a1a] bg-opacity-95 backdrop-blur-sm py-4 px-4 sm:px-6 lg:px-8 border-b border-gray-800"
+      style="z-index: 60"
     >
       <div class="container mx-auto flex justify-between items-center">
         <div class="text-2xl font-bold text-white">Dennis Rua</div>
@@ -133,6 +136,11 @@
             >Video</a
           >
           <a
+            href="#testimonials"
+            class="nav-link text-gray-400 hover:text-white transition-colors duration-300 text-lg font-medium"
+            >Testimonials</a
+          >
+          <a
             href="#contact"
             class="nav-link text-gray-400 hover:text-white transition-colors duration-300 text-lg font-medium"
             >Contact</a
@@ -146,11 +154,10 @@
         </div>
 
         <!-- Mobile Menu Button (Hamburger Icon - visible only on small screens) -->
-        <button
-          id="mobile-menu-button"
-          class="md:hidden text-white focus:outline-none"
-        >
-          <i data-lucide="menu" class="w-8 h-8"></i>
+        <button id="mobile-menu-button" class="hamburger-button md:hidden">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
         </button>
       </div>
     </nav>
