@@ -29,12 +29,12 @@ function typeWriter() {
   }
 
   if (!isDeleting && charIndex === currentPhrase.length) {
-    typeSpeed = 2000; // Pause at end of phrase
+    typeSpeed = 2000;
     isDeleting = true;
   } else if (isDeleting && charIndex === 0) {
     isDeleting = false;
     phraseIndex = (phraseIndex + 1) % phrases.length;
-    typeSpeed = 500; // Pause before typing next phrase
+    typeSpeed = 500;
   }
 
   setTimeout(typeWriter, typeSpeed);
@@ -43,22 +43,21 @@ function typeWriter() {
 // Mobile menu elements and functions
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-const body = document.body; // Reference to the body element
+const body = document.body;
 
 function openMobileMenu() {
   mobileMenuOverlay.classList.add('open');
   body.classList.add('no-scroll');
-  mobileMenuButton.classList.add('open'); // Add 'open' class to hamburger button
+  mobileMenuButton.classList.add('open');
 }
 
 function closeMobileMenu() {
   mobileMenuOverlay.classList.remove('open');
   body.classList.remove('no-scroll');
-  mobileMenuButton.classList.remove('open'); // Remove 'open' class from hamburger button
+  mobileMenuButton.classList.remove('open');
 }
 
 // Event listener for mobile menu button to toggle
-// Added null check here
 if (mobileMenuButton) {
   mobileMenuButton.addEventListener('click', () => {
     if (mobileMenuOverlay.classList.contains('open')) {
@@ -69,7 +68,6 @@ if (mobileMenuButton) {
   });
 }
 
-// Also update the links inside the mobile menu to close the menu when clicked
 document.querySelectorAll('#mobile-menu-overlay a').forEach((link) => {
   link.addEventListener('click', closeMobileMenu);
 });
@@ -103,7 +101,7 @@ window.addEventListener('scroll', () => {
     const sectionTop = section.offsetTop;
     const sectionId = section.getAttribute('id');
 
-    // Check if the current scroll position is within the section
+    // Checking if the current scroll position is within the section
     if (scrollY >= sectionTop && scrollY < sectionTop + section.offsetHeight) {
       current = sectionId;
     }
@@ -133,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     dots.forEach((dot) => dot.classList.remove('bg-orange-500'));
     dots.forEach((dot) => dot.classList.add('bg-gray-500'));
-    // Added null check for dots[index]
+
     if (dots[index]) {
       dots[index].classList.remove('bg-gray-500');
       dots[index].classList.add('bg-orange-500');
@@ -153,7 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
     clearInterval(autoScrollInterval);
   }
 
-  // Added null checks here
   if (nextBtn) {
     nextBtn.addEventListener('click', () => {
       stopAutoScroll();
@@ -162,7 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Added null checks here
   if (prevBtn) {
     prevBtn.addEventListener('click', () => {
       stopAutoScroll();
@@ -181,20 +177,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Corrected: iterate over NodeList to add event listeners to each card
   testimonials.forEach((card) => {
     card.addEventListener('mouseenter', stopAutoScroll);
     card.addEventListener('mouseleave', startAutoScroll);
   });
 
-  // Initialize carousel only if there are testimonial cards
   if (testimonials.length > 0) {
     updateCarousel();
     startAutoScroll();
   }
 });
 
-// Set initial active link on page load and start typing effect
+// Setting initial active link on page load and starting typing effect
 window.addEventListener('load', () => {
   const firstSection = document.getElementById('home');
   if (firstSection) {
@@ -203,7 +197,7 @@ window.addEventListener('load', () => {
       navLinkHome.classList.add('active');
     }
   }
-  // Ensure typingTextElement exists before calling typeWriter
+
   if (typingTextElement) {
     typeWriter(); // Start the typing animation
   }

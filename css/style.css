@@ -57,8 +57,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 32px; /* Adjust size as needed */
-  height: 32px; /* Adjust size as needed */
+  width: 32px;
+  height: 32px;
   cursor: pointer;
   padding: 0;
   background: none;
@@ -70,10 +70,10 @@ body {
   display: block;
   width: 100%;
   height: 3px;
-  background-color: #e0e0e0; /* Changed to match body text color for visibility on dark nav */
+  background-color: #e0e0e0;
   border-radius: 9999px;
   transition: all 0.3s ease-in-out;
-  position: relative; /* For absolute positioning of lines */
+  position: relative;
 }
 
 /* Initial state for lines */
@@ -91,7 +91,6 @@ body {
 /* State when menu is open (transforms to X) */
 .hamburger-button.open .hamburger-line:nth-child(1) {
   transform: rotate(45deg);
-  /* Adjusted 'top' to ensure lines cross symmetrically in the center */
   top: 10px;
 }
 
@@ -102,13 +101,11 @@ body {
 
 .hamburger-button.open .hamburger-line:nth-child(3) {
   transform: rotate(-45deg);
-  /* Adjusted 'top' to ensure lines cross symmetrically in the center */
   top: -10px;
 }
 
 /* Explicitly hide hamburger on medium and larger screens */
 @media (min-width: 768px) {
-  /* Tailwind's 'md' breakpoint */
   .hamburger-button {
     display: none !important; /* Force hide */
   }
@@ -163,21 +160,21 @@ body.no-scroll {
   right: 0;
   bottom: 0;
   background-color: var(--accent-color);
-  z-index: -1; /* Behind the button text */
-  transform: scaleX(0); /* Start with zero width */
-  transform-origin: left; /* Animate from the left */
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
   transition: transform 0.6s cubic-bezier(0.5, 1.5, 0.5, 1);
 }
 
 .btn-contact-submit:hover::before {
-  transform: scaleX(1); /* Scale to full width */
+  transform: scaleX(1);
 }
 
 .btn-contact-submit:hover {
-  color: #1a1a1a; /* Change text color on hover */
-  /* Removed transform: scaleX(1) from here as it conflicts with ::before */
+  color: #1a1a1a;
 }
-/* The typing animation */
+
+/* Typing animation */
 @keyframes typing {
   from {
     width: 0;
@@ -338,62 +335,4 @@ button.btn {
 .skill-tag:hover {
   background-color: var(--accent-color);
   color: #1a1a1a;
-}
-
-/* Mobile menu overlay state */
-#mobile-menu-overlay {
-  background-color: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  inset: 0;
-  z-index: 60;
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
-}
-
-#mobile-menu-overlay.open {
-  transform: translateX(0);
-}
-
-body.no-scroll {
-  overflow: hidden;
-}
-
-#mobile-menu-overlay .nav-link.active {
-  color: var(--accent-color);
-  font-weight: 600;
-}
-
-.btn-contact-submit {
-  overflow: hidden;
-  z-index: 10;
-  background-color: transparent;
-  color: #e0e0e0;
-  transition: color 0.4s ease-in-out;
-  border: 2px solid var(--accent-color);
-  z-index: -10;
-}
-
-.btn-contact-submit::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--accent-color);
-  z-index: -1; /* Behind the button text */
-  transform: scaleX(0); /* Start with zero width */
-  transform-origin: left; /* Animate from the left */
-  transition: transform 0.6s cubic-bezier(0.5, 1.5, 0.5, 1);
-}
-
-.btn-contact-submit:hover::before {
-  transform: scaleX(1); /* Scale to full width */
-}
-
-.btn-contact-submit:hover {
-  color: #1a1a1a; /* Change text color on hover */
-  transform: scaleX(1); /* Apply the scale effect on hover */
 }
