@@ -141,39 +141,6 @@ body.no-scroll {
   font-weight: 600;
 }
 
-.btn-contact-submit {
-  overflow: hidden;
-  z-index: 10;
-  background-color: transparent;
-  color: #e0e0e0;
-  transition: color 0.4s ease-in-out;
-  border: 2px solid var(--accent-color);
-  z-index: -10;
-  position: relative;
-}
-
-.btn-contact-submit::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--accent-color);
-  z-index: -1;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.6s cubic-bezier(0.5, 1.5, 0.5, 1);
-}
-
-.btn-contact-submit:hover::before {
-  transform: scaleX(1);
-}
-
-.btn-contact-submit:hover {
-  color: #1a1a1a;
-}
-
 /* Typing animation */
 @keyframes typing {
   from {
@@ -334,5 +301,38 @@ button.btn {
 }
 .skill-tag:hover {
   background-color: var(--accent-color);
+  color: #1a1a1a;
+}
+
+/* Contact section send button */
+.btn-contact-submit {
+  overflow: hidden;
+  z-index: 10;
+  background-color: transparent;
+  color: #e0e0e0;
+  transition: color 0.4s ease-in-out;
+  border: 2px solid var(--accent-color);
+  position: relative;
+}
+
+.btn-contact-submit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--accent-color);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.5, 1.5, 0.5, 1);
+}
+
+.btn-contact-submit:hover::before {
+  transform: scaleX(1);
+}
+
+.btn-contact-submit:hover {
   color: #1a1a1a;
 }
